@@ -1,4 +1,3 @@
-import { pass } from "three/tsl";
 
 /**
  * 🔒 SecureApp Password Checker
