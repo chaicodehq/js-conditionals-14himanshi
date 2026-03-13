@@ -28,6 +28,7 @@ import { pass } from "three/tsl";
  * @returns {string} "weak", "medium", "strong", or "very strong"
  */
 export function checkPasswordStrength(password) {
+  // Your code here
   if (typeof password !== "string" || password.length === 0) {
     return "weak";
   }

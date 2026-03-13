@@ -33,6 +33,7 @@
  * @returns {number} Parking fee or -1 for invalid input
  */
 export function calculateParkingFee(hours, vehicleType) {
+  // Your code here
   var fee = 0;
   if(hours <= 0){
     return -1;

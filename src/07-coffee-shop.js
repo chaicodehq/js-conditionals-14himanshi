@@ -31,6 +31,7 @@
  * @returns {number} Total price or -1 for invalid input
  */
 export function calculateCoffeePrice(size, type, extras = {}) {
+  // Your code here
   var price=0
   if(size === "small"){
     price = price + 3.00
