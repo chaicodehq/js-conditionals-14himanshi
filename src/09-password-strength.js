@@ -1,3 +1,5 @@
+import { pass } from "three/tsl";
+
 /**
  * 🔒 SecureApp Password Checker
  *
@@ -26,5 +28,21 @@
  * @returns {string} "weak", "medium", "strong", or "very strong"
  */
 export function checkPasswordStrength(password) {
-  // Your code here
+  if (typeof password !== "string" || password.length === 0) {
+    return "weak";
+  }
+
+  let points = 0;
+
+  if (password.length >= 8) points++;
+  if (/[A-Z]/.test(password)) points++;
+  if (/[a-z]/.test(password)) points++;
+  if (/[0-9]/.test(password)) points++;
+  if (/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password)) points++;
+
+  if (points <= 1) return "weak";
+  if (points <= 3) return "medium";
+  if (points === 4) return "strong";
+  return "very strong";
 }
+
